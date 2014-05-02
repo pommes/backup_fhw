@@ -1,5 +1,5 @@
 <h1>Documentation</h1>
-<p>cmd Scripts for Windows for doing daily, weekly, monthly and yearly backups of a specific path in multiple generations.</p>
+<p>cmd Scripts for Windows for doing daily, weekly, monthly and yearly backups of a specific path in multiple generations. The script uses the windows standard command line tool 'robocopy' to create the backups.</p>
 
 <h2>Syntax</h2>
 <p>Since the comments in the scripts are in german, this documentation explains the same in english.</p>
@@ -26,4 +26,22 @@
                           Creates a copy of the created zip archive to the file 
                           'current.zip'. So the file 'current.zip' always contains
                           the last backup.
+</pre>
+
+<h2>Examples</h2>
+<p>Use the windows task sheduler for calling the the script 'backup_fhw.cmd' in the period you want.</p>
+<h3>Daily backup</h3>
+<p>This keeps 7 generations of the source folder.</p>
+<pre>
+  C:\backup_fhw\backup_fhw.cmd c:\xampp f:\backup_fhw\daily 7
+</pre>
+<h3>Weekly backup</h3>
+<p>This keeps 4 generations of the source folder only zipped and copies the newest zip archive also to 'current.zip'.</p>
+<pre>  
+  C:\backup_fhw\backup_fhw.cmd c:\xampp f:\backup_fhw\weekly 4 -z -d -c
+</pre>
+<h3>Manual backup</h3>
+<p>This overwrites the manual backup in the subdirectory 'manuell' in the destination directory.</p>
+<pre>
+  C:\backup_fhw\backup_fhw.cmd c:\xampp f:\backup_fhw -m
 </pre>
