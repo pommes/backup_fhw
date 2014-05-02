@@ -3,6 +3,7 @@ backup_fhw
 
 cmd Scripts for Windows for doing daily, weekly, monthly and yearly backups of a specific path in multiple generations.
 
+<pre>
 Syntax
   backup_fhw.cmd <quelle> <ziel> <n>|m [-i] [-z [-d][-c]] 
               <quelle>  - Quellverzeichnis das mit all seinen Unterverzeichnissen 
@@ -26,3 +27,4 @@ Syntax
                      -c - Hat nur Wirkung, falls "-i" gesetzt. Kopiert die erstellte ZIP
                           Datei nach "current.zip", damit diese immer aktuell ist.
                           Das kann für den Download des letzten Backups genutzt werden.
+</pre>
